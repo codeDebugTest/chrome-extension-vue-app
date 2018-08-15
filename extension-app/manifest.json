@@ -1,0 +1,39 @@
+{
+    "name": "chrome extension",
+    "version": "0.0.1",
+    "icons": {
+        "128": "icons/xxxx.png"
+    },
+    "permissions": [
+        "<all_urls>",
+        "tabs",
+        "activeTab",
+        "clipboardRead",
+        "clipboardWrite"
+    ],
+    "background": {
+        "scripts": [
+            "background/bg.js"
+        ],
+        "persistent": false
+    },
+    "options_page": "option/option.html",
+    "content_scripts": [{
+        "matches": [
+            "<all_urls>"
+        ],
+        "js": [
+            "contentScript/cs.js"
+        ]
+    }],
+    "page_action": {
+        "default_icon": "icons/xxxx.png",
+        "default_title": "chrome extension",
+        "default_popup": "main/index.html"
+    },
+    "web_accessible_resources": [
+        "contentScript/runtime.js"
+    ],
+    "manifest_version": 2,
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
