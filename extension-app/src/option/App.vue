@@ -13,14 +13,14 @@ export default {
         store: {
             type: Object,
             default() {
-                return new model();
+                return new Model();
             }
         }
     },
     created() {
         this.store.init();
     }
-}
+};
 </script>
 <style lang="less">
 .option {

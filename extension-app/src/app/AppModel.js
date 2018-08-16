@@ -3,6 +3,6 @@
  */
 export default class AppModel {
     init() {
-        //init
+        // init
     }
 }
