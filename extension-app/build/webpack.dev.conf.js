@@ -9,6 +9,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
+const lodash_1 = require('lodash')
 
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
@@ -52,11 +53,12 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     new webpack.NamedModulesPlugin(), // HMR shows correct file names in console on update.
     new webpack.NoEmitOnErrorsPlugin(),
     // https://github.com/ampedandwired/html-webpack-plugin
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'index.html',
+    ...lodash_1.map(config.dev.entries, entry => new HtmlWebpackPlugin({
+      filename: `${entry.name}/index.html`, //sign page url
+      template: `entry/${entry.name}.html`,
+      chunks: [`${entry.name}`],
       inject: true
-    }),
+  }))
     // copy custom static assets
     new CopyWebpackPlugin([
       {
