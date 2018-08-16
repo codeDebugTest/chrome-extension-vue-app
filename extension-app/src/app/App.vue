@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <img src="../assets/logo.png">
     <router-view/>
   </div>
 </template>
 
 <script>
+import Model from './AppModel';
+
 export default {
   name: 'App'
-}
+};
 </script>
 
-<style>
+<style lang="less">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

@@ -1,6 +1,7 @@
 <template>
     <div class="option">
         <h2>option page</h2>
+        <img src="../assets/logo.png">
     </div>
 </template>
 <<script>
