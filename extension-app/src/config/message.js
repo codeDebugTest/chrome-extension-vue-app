@@ -1,0 +1,15 @@
+export default {
+    INIT: 1,
+
+    GET_PERMISSION_RULES: 2,
+    RECEIVE_PERMISSION: 3,
+
+    SET_VALUE_ON_PAGE: 4,
+    SET_VALUE: 5,
+
+    RECEIVE_ERROR_ON_PAGE: 6,
+    RECEIVE_ERROR: 7,
+
+    NODATA_ON_PAGE: 8,
+    NODATA: 9
+};
