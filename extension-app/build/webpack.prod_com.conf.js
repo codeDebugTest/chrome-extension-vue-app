@@ -55,6 +55,11 @@ const webpackConfig = {
         // copy custom static assets
         new CopyWebpackPlugin([
             {
+                from: path.resolve(__dirname, '../src/manifest.json'),
+                to: path.resolve(config.build.assetsRoot, 'manifest.json'),
+                toType: 'file'
+            },
+            {
                 from: path.resolve(__dirname, '../src/assets/img/icon.png'),
                 to: utils.assetsPath('../icons/icon.png'),
                 toType: 'file'
