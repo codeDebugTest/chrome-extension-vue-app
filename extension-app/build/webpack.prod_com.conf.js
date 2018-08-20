@@ -51,7 +51,25 @@ const webpackConfig = {
             },
             sourceMap: false,
             parallel: true
-        })
+        }),
+        // copy custom static assets
+        new CopyWebpackPlugin([
+            {
+                from: path.resolve(__dirname, '../src/assets/img/icon.png'),
+                to: utils.assetsPath('../icons/icon.png'),
+                toType: 'file'
+            },
+            {
+                from: path.resolve(__dirname, '../src/assets/img/conan-hand.png'),
+                to: utils.assetsPath('../icons/conan-hand.png'),
+                toType: 'file'
+            },
+            {
+                from: path.resolve(__dirname, '../static'),
+                to: config.build.common.assetsSubDirectory,
+                ignore: ['.*']
+            }
+        ])
     ]
 }
 
