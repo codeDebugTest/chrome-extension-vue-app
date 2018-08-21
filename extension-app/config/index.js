@@ -23,7 +23,7 @@ const entries = [{
     {
         name: 'option',
         src: './src/option/main.js',
-        index: path.resolve(common.assetsOptionRoot, 'index.html'),
+        index: path.resolve(common.assetsOptionRoot, 'option.html'),
         outPath: common.assetsOptionRoot
     }
 ]

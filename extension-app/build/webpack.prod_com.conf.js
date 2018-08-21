@@ -60,18 +60,18 @@ const webpackConfig = {
                 toType: 'file'
             },
             {
-                from: path.resolve(__dirname, '../src/assets/img/icon.png'),
+                from: path.resolve(__dirname, '../src/assets/icon.png'),
                 to: utils.assetsPath('../icons/icon.png'),
                 toType: 'file'
             },
             {
-                from: path.resolve(__dirname, '../src/assets/img/conan-hand.png'),
+                from: path.resolve(__dirname, '../src/assets/conan-hand.png'),
                 to: utils.assetsPath('../icons/conan-hand.png'),
                 toType: 'file'
             },
             {
                 from: path.resolve(__dirname, '../static'),
-                to: config.build.common.assetsSubDirectory,
+                to: config.build.assetsSubDirectory,
                 ignore: ['.*']
             }
         ])
