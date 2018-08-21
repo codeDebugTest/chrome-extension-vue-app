@@ -33,26 +33,26 @@
 
 ---
 
->  ### 指北：
+>  ### CSP指北：
 > 1. manifest_version为2的扩展才会默认开启内容安全策略。
 > 2. 没有定义 manifest_version 的扩展安装包默认是没有内容安全策略的。
 > 3. Inline JavaScript和eval一样危险，将不会被执行，CSP规则将同时禁止内嵌
 > 4. 只有扩展包内的脚本和资源才会被加载！通过Web即时下载的将不会被加载！ 这确保您的扩展只执行已经打包在扩展之中的可信代码，从而避免了线上的网络攻击者通过恶意重定向您所请求的Web资源所带来的安全隐患。
 > 5. ***放宽默认策略*** 通过添加 'unsafe-eval' 来实现，即在mainfest.json中加入下面代码：
-   ```javascript
-   {
-      ...
-      "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
-      ...
-   }
-   ```
+>   ```javascript
+>   {
+>      ...
+>      "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+>      ...
+>   }
+>   ```
 > 6. **怎样引入外部的JavaScript或者资源** 可以通过将HTTPS源的脚本加入白名单来放宽“只加载本地脚本和资源”策略。如：
-  ```javascript
-  {
-      ...
-      "content_security_policy": "script-src 'self' 'unsafe-eval' https://maps.googleapis.com/; object-src 'self'",
-      ...
-  }
-  ```
+>  ```javascript
+> {
+>      ...
+>      "content_security_policy": "script-src 'self' 'unsafe-eval' https://maps.googleapis.com/; object-src 'self'",
+>      ...
+>  }
+>  ```
     
 
