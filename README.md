@@ -27,12 +27,10 @@
 >  3. [Content Security Policy Reference](https://content-security-policy.com/)
 >  4. [Content Security Policy Level 3](https://w3c.github.io/webappsec-csp/)
  
- ---
  
 ### [vue 官网:](https://cn.vuejs.org/v2/guide/installation.html#CSP-%E7%8E%AF%E5%A2%83)
    有些环境，如 Google Chrome Apps，会强制应用内容安全策略 (CSP)，不能使用 new Function() 对表达式求值。这时可以用 CSP 兼容版本
 
----
 
 ### CSP指北：
 > 1. manifest_version为2的扩展才会默认开启内容安全策略。
