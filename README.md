@@ -20,7 +20,8 @@
 * [google开发文档](https://crxdoc-zh.appspot.com/extensions/devguide)
 
 ## Content Security Policy 
-> ### Google官方及文档:
+
+### Google官方文档:
 >  1. [Content Security Policy (CSP)](https://developer.chrome.com/extensions/contentSecurityPolicy)
 >  2. [An Introduction to Content Security Policy](https://www.html5rocks.com/en/tutorials/security/content-security-policy/)
 >  3. [Content Security Policy Reference](https://content-security-policy.com/)
@@ -28,12 +29,12 @@
  
  ---
  
-> ### [vue 官网:](https://cn.vuejs.org/v2/guide/installation.html#CSP-%E7%8E%AF%E5%A2%83)
+### [vue 官网:](https://cn.vuejs.org/v2/guide/installation.html#CSP-%E7%8E%AF%E5%A2%83)
    有些环境，如 Google Chrome Apps，会强制应用内容安全策略 (CSP)，不能使用 new Function() 对表达式求值。这时可以用 CSP 兼容版本
 
 ---
 
->  ### CSP指北：
+### CSP指北：
 > 1. manifest_version为2的扩展才会默认开启内容安全策略。
 > 2. 没有定义 manifest_version 的扩展安装包默认是没有内容安全策略的。
 > 3. Inline JavaScript和eval一样危险，将不会被执行，CSP规则将同时禁止内嵌
