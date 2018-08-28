@@ -1,5 +1,5 @@
 # chrome-extension-vue-app
-> ## extension-vue-app
+## extension-vue-app
 > 1. 选项页面option与弹出页面app分开单独编译
 > 2. 编译后生成crx文件夹，在chrome开发者模式下-->加载已解压的扩展程序
 > 3. 编译：Webpack + vue-loader 可以在 CSP 环境中完美运行。
